@@ -1,0 +1,421 @@
+
+
+body{
+    background: linear-gradient(135deg,black,gray);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.headerImage{
+    display: flex;
+    position: relative;
+}
+
+.headerImage .bgImage{
+    width: 100%;
+}
+.headerImage .bgImage img{
+
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+}
+
+
+.logo{
+    position: fixed;
+    
+    top: calc(50% - 133.5px);
+    right: 0px;
+    z-index: 10;
+}
+.logo img{   
+    height: 267px;
+    width: 62px;   
+}
+
+
+.social{
+    
+    position: absolute;
+    font-size: 200%;
+
+    width: auto;
+    padding-left: 30px;
+    padding-top: 15px;
+    z-index: 10;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+.social a{
+    color:whitesmoke;
+}
+
+.social a:hover{
+    color: palevioletred;
+}
+
+
+.navBar{
+    position: absolute;
+    
+    z-index: 10;
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.navBar a{
+
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 150%;
+    margin: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: 0 4px 0 10px;
+    
+}  
+
+.navBar a:hover{
+
+    
+    color: #00ecff;
+
+}
+
+
+.branding{
+    display: flex;
+    background-color: dimgray;
+    margin: 30px;
+    border-radius: 12px;
+    box-shadow: 5px 5px black;    
+}
+
+.description{
+    
+
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+
+    font-size: 60px;
+    font-weight: bolder;
+    
+    background-size: 20%;
+    background-image: linear-gradient(to right,#00ecff,palevioletred);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.cards{
+    
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    
+    
+    text-align: center;
+    font-size: xx-large;
+
+    color: whitesmoke;
+}
+
+.heading{
+    padding: 15px;
+}
+.card img{
+    width: 90%;
+    align-self: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    transition: 2s;
+    border: 15px ridge darkgray;
+    border-radius: 15px; 
+}
+
+.card:hover img{
+    opacity: 0.3;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.overlay{
+    opacity: 0;
+    position: absolute;
+
+    padding-left: 40px;
+    padding-top: 20px;
+
+    color: #f40fb9;
+
+    font-size: x-large;
+}
+
+
+.info{
+   
+    color: whitesmoke;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.info .text{
+
+   
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    
+}
+
+.info .images{
+    width: 100%;
+    margin: 15px;
+    text-align: end;
+}
+.info .images img{
+    padding: 12px;
+    width:85%;
+    
+}
+
+
+.navDrop{
+    position: fixed;
+    display: none;
+    top: calc(50% - 300px);
+    right: 0px;
+    z-index: 10;
+}
+
+.navDrop img{
+    height: 62px;
+    width: 62px; 
+}
+
+.navDrop .dropbtn{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border: none;
+    background-color: black;
+}
+
+.navDrop:hover .dropdown{
+    display: flex;
+}
+
+.navDrop .dropdown{
+    display: none;
+    flex-direction: column;
+}
+
+.navDrop .dropdown a{
+   
+    background: linear-gradient(135deg,black,gray);
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 85%;
+    margin: 13px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: 0 0 10px;
+}
+
+.navDrop .dropdown a:hover{
+    color: #00ecff;
+}
+
+@media (max-width: 1150px){
+
+    .navDrop{
+        display: block;
+    }
+
+    .headerImage .navBar{
+        display: none;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .cards .card .overlay{
+        font-size: xx-large;
+        width: 100%;
+        text-align: center;
+        top: 30%;
+    }
+}
+
+
+@media (max-width: 480px){
+    .logo img{
+        height: 200px;
+        width: 42px;
+    }
+
+    .navDrop img{
+        height: 42px;
+        width: 42px;
+    }
+
+    .social{
+        font-size: 100%;
+    }
+
+    .branding .description{
+        font-size: 50px;
+    }
+
+    .cards .card .overlay{
+        opacity: 1;
+        width: auto;
+        top: 2%;
+        font-size: 15px;
+    }
+
+    .cards .card img{
+        opacity: 0.4;
+    }
+
+    .info{
+        flex-direction: column-reverse;
+    }
+    .info .text{
+        font-size: 15px;
+        text-align: center;
+    }
+    .info .images{
+        text-align: initial;
+    }
+}
+/*
+
+@media (max-width: 1300px ){
+
+    .navDrop{
+        display: block;
+    }
+
+    .headerImage .navBar{
+        display: none;
+    }
+
+    .cards .card .overlay{
+        font-size: 20px;
+    }
+
+    .info .text{
+        font-size: larger;
+    }
+}
+
+
+@media (max-width: 1160px){
+    .cards{
+        flex-direction: column;
+    }
+    .cards .card{
+        margin: 50px;
+    }
+
+    .cards .card .overlay{
+        font-size: 16px;
+    }
+
+    .info{
+        top:1700px;
+    }
+
+    .info .text{
+        font-size: medium;
+    }
+
+    .headerImage .description{
+
+        top: auto;
+        bottom: 25%;
+    }
+
+    .headerImage{
+        background-size: auto;
+    }
+}
+
+
+@media (max-width: 900px){
+
+    .logo img{   
+        height: 240px;
+        width: 52px;   
+    }
+
+    .navDrop img{
+        height: 52px;
+        width: 52px; 
+    }
+
+    .social{
+        font-size: 120%;
+    }
+
+
+    .info{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .info .images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .info .images img{
+    
+        width: 65%;
+        height: 300px;
+        
+    }
+
+    .cards .card{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards .card img{
+        width: 40%;
+    }
+
+}
+
+*/
